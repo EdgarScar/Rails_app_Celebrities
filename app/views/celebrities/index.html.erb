@@ -1,0 +1,16 @@
+<h1>Celebrities Forum</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+    </tr>
+
+    <% @celebrities.each_with_index do |celebrity, index| %>
+        <tr>
+            <td>
+                <%= link_to "#{celebrity[:first_name].capitalize} #{celebrity[:last_name].capitalize}", show_path(index) %>
+            </td>
+        </tr>
+    <% end %>
+
+</table>
